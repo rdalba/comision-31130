@@ -1,0 +1,15 @@
+Paso 1 - Instalar NODE
+    Node: Entorno para ejecutar JS en la maquina
+Paso 2 -    Instalar WEBPACK y BABEL
+            Instalar REACT APP (configura automatimante el WEBPACK y BABEL)
+            #npm i -g create-react-app
+Paso 3 -    Crear el Proyecto ( en consola )
+            a - #crear el directorio [comision-31130]]
+            b - #npm i -g create-react-app
+            c - #create-react-app [comision-31130]
+Paso 3 -    iniciar el npm
+            #cd comision-31130
+            #npm start
+
+            
+
