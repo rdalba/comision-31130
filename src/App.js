@@ -6,19 +6,19 @@ import CartWidget from './Components/CartWidget';
 import ItemListContainer from './Components/ItemListContainer';
 
 const App = () => {
-  
-  const welcome = "Bienvenido a la Tienda de Hockey" 
+
+  const welcome = "Bienvenido a la Tienda de Hockey"
   return (
     <>
 
       <NavBar>
-        <CartWidget/>
+        <CartWidget />
       </NavBar>
 
-    <ItemListContainer greeting={welcome}/>
+      <ItemListContainer greeting={welcome} />
 
-  
-  </>
+
+    </>
 
   );
 }

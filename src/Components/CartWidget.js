@@ -3,8 +3,8 @@ import { BsFillCartFill } from "react-icons/bs";
 
 const CartWidget = () => {
     return (
-        <BsFillCartFill/>
-        )
+        <BsFillCartFill />
+    )
 }
 
 export default CartWidget;
