@@ -3,7 +3,8 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 
-const NavBar = () => {
+
+const NavBar = (props) => {
 
   return (
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -52,7 +53,14 @@ const NavBar = () => {
       <Nav.Link eventKey={2} href="#memes">
         Dank memes
       </Nav.Link>
+      
+      <Nav.Link >
+        {props.children}
+      </Nav.Link>
+
     </Nav>
+    
+
   </Navbar.Collapse>
   </Container>
 </Navbar>
