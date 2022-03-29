@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Componente
+crear una funcion
+`
+    const functionName = () => {}
+`
+
+
+React espera que todo este dentro de un solo nodo (en el return)
+se puede utilizar un div, pero por buenas practicas es bueno utilizar fragments
+`
+    <> código acá adentro. </>
+`

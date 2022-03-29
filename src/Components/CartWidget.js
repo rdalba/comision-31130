@@ -1,10 +1,15 @@
-import { BsFillCartFill } from "react-icons/bs";
+import {Icon} from "react-materialize";
 
-
-const CartWidget = () => {
+const CartWidget = ()  => {
     return (
-        <BsFillCartFill />
+        <>
+            <Icon medium>
+                shopping_cart
+            </Icon>
+        </>
     )
 }
+
+
 
 export default CartWidget;

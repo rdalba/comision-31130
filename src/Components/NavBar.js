@@ -1,70 +1,36 @@
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import Container from 'react-bootstrap/Container'
-
+import React from "react";
+import '../styles/NavBar.css'
+import logo from "../logo.svg";
+import {Icon, Navbar, NavItem} from "react-materialize";
 
 const NavBar = (props) => {
+    return (
+        <>
+            <Navbar
+                alignLinks="right"
+                brand={<img src={logo} className="App-logo" alt="logo"/>}
+                id="mobile-nav"
+                className="custom-nav"
+                centerLogo={false}
+                fixed={true}
+                menuIcon={<Icon>menu</Icon>}
+            >
+                <NavItem className="custom-nav-item" href="https://shop.nhl.com/san-jose-sharks/t-36480811+z-9302064-3930396032?_ref=m-TOPNAV">
+                    San Jose Sharks Official Shop
+                </NavItem>
+                <NavItem className="custom-nav-item" href="https://shop.nhl.com/florida-panthers/t-31080624+z-9592359-526191922?_ref=m-TOPNAV">
+                    Phanthers Official Shop
+                </NavItem>
+                <NavItem className="custom-nav-item" href="https://shop.nhl.com/new-york-rangers/t-36373004+z-9999451-2213146187?_ref=m-TOPNAV">
+                    New York Ranger Official Shop
+                </NavItem>
+                <NavItem className="custom-nav-item">
+                    {props.children}
+                </NavItem>
+            </Navbar>
+        </>
+    );
 
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">Tienda de Hockey</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-
-
-            <NavDropdown title="Novedades" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/1.1">Remeras</NavDropdown.Item>
-              <NavDropdown.Item href="#action/1.2">Buzos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/1.3">Pantalones</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/1.4">Ofertas</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Remera" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/2.1">Manga Larga</NavDropdown.Item>
-              <NavDropdown.Item href="#action/2.2">Manga Corta</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/2.3">Ofertas link</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Jersey" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Local</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Visitante</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Alternativa</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Ofertas link</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Varios" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Gorras</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Bolsos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Puck</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Ofertas link</NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link href="#features">Reglas</Nav.Link>
-            <Nav.Link href="#pricing">Envios</Nav.Link></Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-
-            <Nav.Link >
-              {props.children}
-            </Nav.Link>
-
-          </Nav>
-
-
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
 }
 
 export default NavBar;

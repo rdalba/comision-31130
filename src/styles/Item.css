@@ -1,0 +1,12 @@
+.card .card-image img {
+    object-fit: scale-down;
+    height: 35vh;
+}
+
+.card .card-content .card-title i {
+    display: none;
+}
+
+.btnDetail {
+    align-content:  center;
+}
