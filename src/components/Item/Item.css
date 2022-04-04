@@ -1,0 +1,24 @@
+
+.card {
+    text-align: center;
+    background: white;
+    border: 2px solid #FF4E00;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 15px;
+    
+}
+
+
+.card .card-image img {
+    object-fit: scale-down;
+    height: 50vh;
+}
+
+.card .card-content .card-title i {
+    display: none;
+}
+
+.btnDetail {
+    align-content:  center;
+}
