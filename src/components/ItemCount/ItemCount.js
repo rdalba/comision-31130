@@ -4,7 +4,7 @@ import {useState} from "react";
 
 const ItemCount = ({stock, initial, onAdd }) => {
     const btnMessage = "Agregar Al Carrito"
-    const cardTitle = "Jersey Argentina"
+    //const cardTitle = "Jersey Argentina"
     const [disponible, setDisponible] = useState(stock);
     const [cantidad, setCantidad] = useState(initial)
 
@@ -43,14 +43,13 @@ const ItemCount = ({stock, initial, onAdd }) => {
 
     return (
         <>
-            <Row className="itemCount-align" >
-                <Col className="center-align" l={3} m={6} s={12}>
+            <Row>
+                <Col className="center-align" l={12} m={12} s={12}>
                     <Card
                         className="grey darken-1 s4"
-                        textClassName="white-text"
-                        title={cardTitle}>
+                        textClassName="white-text">
+
                         <Row>
-                            
                             <Col className="center-align" l={3}>
                                 <Button onClick={substractItem}
                                     node="button"

@@ -1,31 +1,32 @@
-import {useEffect, useState} from "react";
-import {ProductService} from "../../service/ProductService/ProductService";
+import { useEffect, useState } from "react";
+import { ProductService } from "../../service/ProductService/ProductService";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainer = ({message}) => {
+import { useParams } from "react-router-dom";
 
-    const [item, setItem] = useState({})
+const ItemDetailContainer = ({ message }) => {
+  const [item, setItem] = useState({});
+  const { id: itemId } = useParams();
 
-    useEffect(() => {
-        getItems();
-    }, [])
+  useEffect(() => {
+    getItems(itemId);
+  }, []);
 
-    async function getItems() {
-        const response = await ProductService().get();
-        setItem(getItemRandom(response));
-    }
+  const getItems = async (itemId) => {
+    const response = await ProductService().get();
+    setItem(getItem(response, itemId));
+  };
 
-    const getItemRandom = (items) => {
-        return items[Math.floor((Math.random()*items.length))];
-    }
+  const getItem = (items, itemId) => {
+    return items.find((item) => item.id === Number(itemId));
+  };
 
-    return(
-        <>
-            <h1>{message}</h1>
-            <ItemDetail product={item}/>
-        </>
-    )
-
-}
+  return (
+    <>
+      <h1>{message}</h1>
+      <ItemDetail product={item} />
+    </>
+  );
+};
 
 export default ItemDetailContainer;

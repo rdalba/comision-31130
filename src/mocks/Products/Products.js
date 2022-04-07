@@ -1,52 +1,166 @@
-export const Products = [
+export const Products = 
+[
   {
-    id: 1,
-    articuloTitulo: "Men's San Jose Sharks adidas Teal Authentic Custom Jersey",
-    descripcion: "Color Teal - Manufacturer Direct Item",
-    precio: 249.99,
-    img:
-      "https://i.ebayimg.com/thumbs/images/g/u8UAAOSw0lFiHLfh/s-l300.jpg",
-      
+     "id": 1,
+     "articuloTitulo": "Warrior Covert QR Edge Grip Senior Hockey Stick",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/w/a/warrior-hockey-stick-covert-qr-edge-grip-sr.jpg",
+     "precio": "Usd 189.98",
+     "observacion": "",
+     "descripcion": "Covert QR Edge technology is unlike anything seen before in a hockey stick. We created the Edge Taper which maximizes the energy transfer by focusing the energy down into the blade for our fastest release yet.",
+     "marca": "Warrior",
+     "category":{
+        "id":1,
+        "name":"Stick"
+        }
+  },
+
+  {
+     "id": 2,
+     "articuloTitulo": "Bauer Vapor 3X Pro Senior Roller Hockey Skates",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/b/a/bauer-roller-hockey-skates-vapor-3x-pro-sr.jpg",
+     "precio": "Usd 799.99",
+     "observacion": "",
+     "descripcion": "Brand new for 2022, Bauer Hockey is innovating on their popular Vapor Roller Hockey Skate line with the Bauer Vapor 3X Pro Senior Roller Hockey Skates. With key improvements made to nearly every part of the skates, Bauer looks to offer ultimate performance every time you lace up your skates.",
+     "marca": "Bauer",
+     "category":{
+        "id":2,
+        "name":"Skate"
+        }
   },
   {
-    id: 2,
-    articuloTitulo: "Men's San Jose Sharks adidas Teal Authentic Custom Jersey",
-    descripcion: "Color Black - Manufacturer Direct Item",
-    precio: 249.99,
-    img:
-      "https://i.ebayimg.com/thumbs/images/g/sUwAAOSwoHZiCPFw/s-l300.jpg",
+     "id": 3,
+     "articuloTitulo": "Bauer Vapor X3.7 Senior Ice Hockey Skates",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/b/a/bauer-hockey-skates-vapor-x3-7-sr.jpg",
+     "precio": "Usd 249.99",
+     "observacion": "",
+     "descripcion": "New for 2021, Bauer is looking to offer a performance level skate that is flexible and comfortable, with the Bauer Vapor X3.7 Senior Hockey Skates. Featuring a Digi comp quarter construction, and an updated liner and tongue, these skates will be great for any performance level player looking for a comfortable flexible skate.",
+     "marca": "Bauer",
+     "category":{
+        "id":3,
+        "name":"Skate"
+        }
   },
   {
-    id: 3,
-    articuloTitulo:
-      "Men's Florida Panthers adidas Red Home Primegreen Authentic Pro Custom Jersey",
-    descripcion: "Color Red - Manufaturer Direct Item",
-    precio: 249.99,
-    img:
-      "https://www.panthersteamgoods.com/img/?&w=560&img=Florida_Panthers/392929thornton19m.jpg",
+     "id": 4,
+     "articuloTitulo": "CCM Tacks 910 Hockey Helmet",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/c/c/ccm-hockey-helmet-tacks-910.jpg",
+     "precio": "Usd 229.99",
+     "observaciones": "",
+     "descripcion": "Years of leading R&D and performance testing have led to the pinnacle in head protection, thus introducing the new CCM Super Tacks 910 Hockey Helmet from CCM Hockey! Thanks to all-new pro-grade technologies, the Super Tacks 910 Helmet is one of the most advanced on the market.",
+     "marca": "CCM",
+     "category":{
+        "id":4,
+        "name":"Helmet"
+        }
   },
   {
-    id: 4,
-    articuloTitulo:
-      "Men's Florida Panthers adidas Red Home Primegreen Authentic Pro Custom Jersey",
-    descripcion: "Color White - Manufaturer Direct Item",
-    precio: 249.99,
-    img:
-      "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_4262000/altimages/ff_4262814-fb568dd2584c438b2554alt1_full.jpg&w=900",
+     "id": 5,
+     "articuloTitulo": "Warrior Alpha DX Senior Hockey Gloves",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/w/a/warrior-hockey-gloves-alpha-dx-sr.jpg",
+     "precio": "Usd 189.98",
+     "observaciones": "",
+     "descripcion": "Brand new for the 2019 season are the Warrior Alpha DX Senior Hockey Gloves! Featuring Warrior Hockey’s newest features and technology, these gloves aim to be their most comfortable and protective glove to date.",
+     "marca": "Warrior",
+     "category":{
+        "id":5,
+        "name":"Gloves"
+        }
   },
   {
-    id: 5,
-    articuloTitulo: "Power Ranger: Battle For The Grid (SUPER Edition)",
-    descripcion: "Color Blue - Manufaturer Direct Item",
-    precio: 249.99,
-    img: "https://i.ebayimg.com/images/g/2O4AAOSwdf9bv1cS/s-l300.jpg",
+     "id": 6,
+     "articuloTitulo": "Bauer Supreme Ultrasonic Senior Hockey Equipment Bundle",
+     "img": "https://www.hockeymonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/b/a/bauer-ex-ultrasonic-sr.jpg",
+     "precio": "Usd 549.97",
+     "observaciones": [
+        {
+           "pechera": "Bauer Supreme Ultrasonic Senior Hockey Shoulder Pads",
+           "canillera": "Bauer Supreme Ultrasonic Senior Hockey Shin Guards",
+           "coderas": "Bauer Supreme Ultrasonic Senior Hockey Elbow Pads"
+        }
+      ],
+     
+     "descripcion": "Bauer Supreme Ultrasonic Senior Hockey Shoulder Pads. Brand new for the 2021 hockey season are the Bauer Supreme Ultrasonic Shoulder Pads from Bauer Hockey. Designed with upgraded key features and revisions, these anatomical shoulder pads are looking to improve upon the already great supreme shoulder pad line.",
+     "marca": "Bauer",   
+     "category":{
+        "id":6,
+        "name":"Bundle"
+        }
   },
   {
-    id: 6,
-    articuloTitulo: "Mario Strikers: Battle League",
-    descripcion: "Color White - Manufaturer Direct Item",
-    precio: 249.99,
-    img:
-      "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_2869000/altimages/ff_2869008alt1_full.jpg&w=900",
+     "id": 7,
+     "articuloTitulo": "Men's San Jose Sharks adidas Teal Authentic Custom Jersey",
+     "img": "https://i.ebayimg.com/thumbs/images/g/u8UAAOSw0lFiHLfh/s-l300.jpg",
+     "precio": "Usd 249.99",
+     "descripcion": "Color Teal - Manufacturer Direct Item",
+     "marca": "Adidas",   
+     "category":{
+        "id":7,
+        "name":"Jersey"
+        }
   },
-];
+  {
+     "id": 8,
+     "articuloTitulo": "Men's San Jose Sharks adidas Teal Authentic Custom Jersey",
+     "img": "https://i.ebayimg.com/thumbs/images/g/sUwAAOSwoHZiCPFw/s-l300.jpg",
+     "observaciones": "",
+     "precio": 249.99,
+     "descripcion": "Color Black - Manufacturer Direct Item",
+     "marca": "Adidas",   
+     "category":{
+        "id":8,
+        "name":"Jersey"
+        }
+  },
+  {
+     "id": 9,
+     "articuloTitulo": "Men's Florida Panthers adidas Red Home Primegreen Authentic Pro Custom Jersey",
+     "img": "https://www.panthersteamgoods.com/img/?&w=560&img=Florida_Panthers/392929thornton19m.jpg",
+     "precio": 249.99,
+     "observaciones": "",
+     "descripcion": "Color Red - Manufaturer Direct Item",
+     "marca": "Adidas",   
+     "category":{
+        "id":9,
+        "name":"Jersey"
+        }
+  },
+  {
+     "id": 10,
+     "articuloTitulo": "Men's Florida Panthers adidas Red Visitor Primegreen Authentic Pro Custom Jersey",
+     "img": "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_4262000/altimages/ff_4262814-fb568dd2584c438b2554alt1_full.jpg&w=900",
+     "precio": 249.99,
+     "observaciones": "",
+     "descripcion": "Color White - Manufaturer Direct Item",
+     "marca": "Adidas",   
+     "category":{
+        "id":10,
+        "name":"Jersey"
+        }
+  },
+  {
+     "id": 11,
+     "articuloTitulo": "Men's New York Ranger Home Primegreen Authentic Pro Custom Jersey",
+     "img": "https://i.ebayimg.com/images/g/2O4AAOSwdf9bv1cS/s-l300.jpg",
+     "precio": 249.99,
+     "observaciones": "",
+     "descripcion": "Color Blue - Manufaturer Direct Item",
+     "marca": "Adidas",   
+     "category":{
+        "id":11,
+        "name":"Jersey"
+        }
+  },
+  {
+     "id": 12,
+     "articuloTitulo": "Men's New York Ranger Visitor Primegreen Authentic Pro Custom Jersey",
+     "img": "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_2869000/altimages/ff_2869008alt1_full.jpg&w=900",
+     "precio": 249.99,
+     "descripcion": "Color White - Manufaturer Direct Item",
+     "observaciones": "",
+     "marca": "Adidas",   
+     "category":{
+        "id":12,
+        "name":"Jersey"
+        }
+  }
+]

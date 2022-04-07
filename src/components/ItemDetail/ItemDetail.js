@@ -1,38 +1,35 @@
-import { Button, Card, CardTitle, Col, Icon } from "react-materialize";
+import "./ItemDetail.css";
+import { Card, CardTitle, Col, Icon, Row } from "react-materialize";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ product }) => {
+  const onAdd = (cantidad) => {
+    console.log(`Esta comprando ${cantidad} items`);
+  };
+
   return (
     <>
-      <Col l={4} m={6} s={12}>
+      <Col l={6} m={6} s={12}>
         <Card
-          className="card card-image img"
+          className="card card-image img card-margin"
           closeIcon={<Icon>close</Icon>}
-          header={<CardTitle image={product.img} reveal waves="light" />}
-          reveal={
-            <>
-              <h3>Precio: ${product.precio}</h3>
-              <p>{product.descripcion}</p>
-              <h5>{product.marca}</h5>
-              <p>{product.observacion}</p>
+          header={<CardTitle image={product.pictureUrl} reveal waves="light" />}
+          horizontal
+        >
+          <>
+            <Row>
+              <Col l={9} m={9}>
+                <h3>Precio: ${product.price}</h3>
+                <p>{product.description}</p>
+                <p>{product.title}</p>
+              </Col>
 
-              <div className="btnDetail">
-                <Button
-                  node="button"
-                  style={{
-                    marginRight: "5px",
-                  }}
-                  waves="light"
-                >
-                  Ver Detalle
-                </Button>
-              </div>
-            </>
-          }
-          title={product.articuloTitulo}
-        ></Card>
-
-        <ItemCount stock={10} initial={1} onAdd={() => console.log("hola")} />
+              <Col l={3} m={3}>
+                <ItemCount stock={10} initial={1} onAdd={onAdd} />
+              </Col>
+            </Row>
+          </>
+        </Card>
       </Col>
     </>
   );
