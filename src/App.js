@@ -22,11 +22,9 @@ const App = () => {
           path="/"
           element={<ItemListContainer greeting={welcome} />}/>
         <Route
-          path="/categories/:id"
-          element={<ItemListContainer greeting={welcome} />}/>
+          path="/categories/:id" element={<ItemListContainer greeting={welcome} />}/>
         <Route
-          path="/item/:id"
-          element={<ItemDetailContainer message={messageItemDetail} />}/>
+          path="/item/:id" element={<ItemDetailContainer message={messageItemDetail} />}/>
       </Routes>
 
     </BrowserRouter>

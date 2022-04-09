@@ -20,5 +20,33 @@
 }
 
 .btnDetail {
+    text-decoration: none;
     align-content:  center;
+    background-color: #333;
+    color: white;
+    font-size: 2em;
+}
+.btnDetail:hover {
+    background-color: #FF4E00;
+    color: white;
+}
+
+
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 5em;
+}
+
+h4{
+    font-size: 2.5em;
+}
+
+h5{
+    font-size: 3em;
+}
+
+p{
+    font-size: 1.5em;
 }

@@ -14,17 +14,25 @@ const Item = ({ product }) => {
           reveal={
             <>
               <h3>Precio: {product.precio}</h3>
+              <br></br>
+              <br></br>
               <p>{product.descripcion}</p>
-              <p>{product.descripcion}</p>
-              <h5>{product.marca}</h5>
+              <br></br>
+              <br></br>
+              <h4>{product.marca}</h4>
+              <br></br>
               <p>{product.observacion}</p>
 
               <div className="btnDetail">
-                <Link to={`/item/${product.id}`}>Ver Detalle</Link>
+                <Link to={`/item/${product.id}`}> COMPRAR </Link>
               </div>
             </>
           }
-          title={product.articuloTitulo}
+          title={
+            <>
+              <h2>{product.articuloTitulo}</h2>
+            </>
+            }
         ></Card>
       </Col>
     </>

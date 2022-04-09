@@ -2,8 +2,9 @@
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { ProductService } from "../../service/ProductService/ProductService";
-
 import { useParams } from "react-router-dom";
+
+
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
