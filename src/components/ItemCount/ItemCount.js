@@ -4,8 +4,9 @@ import {useState} from "react";
 
 const ItemCount = ({stock, initial, onAdd }) => {
     const btnMessage = "Agregar Al Carrito"
-    //const cardTitle = "Jersey Argentina"
-    const [disponible, setDisponible] = useState(stock);
+
+    //const [disponible, setDisponible] = useState(stock);
+    const [disponible, setDisponible] = useState(parseInt(stock));
     const [cantidad, setCantidad] = useState(initial)
 
 

@@ -5,7 +5,8 @@ import NavBar from "./components/NavBar/NavBar";
 import CartWidget from "./components/CartWidget/CartWidget";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
 
 const App = () => {
   const welcome = "Bienvenido a la Tienda de Hockey";
@@ -18,15 +19,17 @@ const App = () => {
       </NavBar>
 
       <Routes>
+        <Route path="/" element={<ItemListContainer greeting={welcome} />} />
         <Route
-          path="/"
-          element={<ItemListContainer greeting={welcome} />}/>
+          path="/categories/:id"
+          element={<ItemListContainer greeting={welcome} />}
+        />
         <Route
-          path="/categories/:id" element={<ItemListContainer greeting={welcome} />}/>
-        <Route
-          path="/item/:id" element={<ItemDetailContainer message={messageItemDetail} />}/>
+          path="/item/:id"
+          element={<ItemDetailContainer message={messageItemDetail} />}
+        />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-
     </BrowserRouter>
   );
 };
