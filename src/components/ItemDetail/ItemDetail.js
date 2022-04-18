@@ -13,7 +13,7 @@ const ItemDetail = ({ product }) => {
   const {addItem} = useContext(contexto);
 
   const onAdd = (cantidad) => {
-    console.log(`Esta comprando ${cantidad} items`);
+    console.log(`Esta comprando {cantidad} items`);
     addItem(product, cantidad);
     setFinished(true);
   };

@@ -7,9 +7,7 @@ const Cart = () => {
   return (
     <>
       <h1>Carrito</h1>
-      {items.map((i) => (
-        <p>{JSON.stringify(i)}</p>
-      ))}
+      {items.map(i => <p>{JSON.stringify(i)}</p>)}
     </>
   );
 };

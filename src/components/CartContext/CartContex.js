@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const contexto = createContext([]);
 
-const { Provider } = contexto;
+const {Provider} = contexto;
 
 const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
@@ -10,8 +10,8 @@ const CartProvider = ({ children }) => {
   const addItem = (item, quantity) => {
     const nuevoItem = {
       ...item,
-      quantity,
-    };
+      quantity
+    }
     console.log(nuevoItem);
     if (isInCart(nuevoItem.id)) {
       const producto = items.find((item) => item.id === nuevoItem.id);
@@ -27,7 +27,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (itemId) => {
-    const filteredList = items.filter((item) => item.id === itemId);
+    const filteredList = items.filter(item => item.id === itemId);
     setItems(filteredList);
   };
 
@@ -41,7 +41,11 @@ const CartProvider = ({ children }) => {
     return find !== undefined;
   };
 
-  return <Provider value={{ items, addItem }}>{children}</Provider>;
+  return (
+  <Provider value={{ items, addItem }}>
+    {children}
+    </Provider>
+  )
 };
 
 export default CartProvider;
