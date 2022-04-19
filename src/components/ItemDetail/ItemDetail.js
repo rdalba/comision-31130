@@ -4,17 +4,21 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {useContext} from "react";
-import {contexto} from "../CartContext/CartContex";
+import CartProvider from "../../context/CartContext";
+
 
 
 const ItemDetail = ({ product }) => {
+
   const [finished, setFinished] = useState(false);
 
-  const {addItem} = useContext(contexto);
+  
+  const context = useContext(CartProvider);
+  console.log(context);
 
   const onAdd = (cantidad) => {
     console.log(`Esta comprando {cantidad} items`);
-    addItem(product, cantidad);
+  
     setFinished(true);
   };
 
