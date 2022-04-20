@@ -14,22 +14,19 @@ const CartProvider = ({children}) => {
             ...item,
             quantity
         }
-        console.log(nuevoItem);
         if (isInCart(nuevoItem.id)) {
             const producto = items.find(item => item.id === nuevoItem.id);
             let index = items.indexOf(producto);
             const modifiableList = [...items];
             modifiableList[index].quantity += quantity
-            console.log(modifiableList)
             setItems(modifiableList)
         } else {
             setItems([...items, nuevoItem])
-            console.log(items);
         }
     }
 
     const removeItem = (itemId) => {
-        const filteredList = items.filter(item => item.id === itemId);
+        const filteredList = items.filter(item => item.id !== itemId);
         setItems(filteredList);
     }
 
@@ -39,12 +36,23 @@ const CartProvider = ({children}) => {
 
     const isInCart = (id) => {
         const find = items.find(item => item.id === id);
-        console.log(find !== undefined);
         return find !== undefined;
     }
 
+    const getItemsQty = () => {
+        return items.reduce((n, item) => {
+            return n + item.quantity;
+        }, 0);
+    }
+
+    const getTotalCompra = () => {
+        return items.reduce((n, item) => {
+            return n + (item.price * item.quantity);
+        }, 0);
+    }
+
     return (
-        <Provider value={{items, addItem}}>
+        <Provider value={{items, addItem, removeItem, clear, getItemsQty, getTotalCompra}}>
             {children}
         </Provider>
     )
@@ -52,4 +60,3 @@ const CartProvider = ({children}) => {
 }
 
 export default CartProvider;
-

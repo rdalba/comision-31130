@@ -1,11 +1,11 @@
 import React from "react";
 import "./NavBar.css";
 import logo from "../../logo.svg";
-import { Navbar, NavItem } from "react-materialize";
-import {NavLink, Link} from "react-router-dom";
+import { Navbar } from "react-materialize";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = (props) => {
-  const categories = ["Jersey","Stick","Skate","Helmet","Gloves","Bundle"]
+  const categories = ["Jersey", "Stick", "Skate", "Helmet", "Gloves", "Bundle"];
 
   return (
     <>
@@ -13,31 +13,27 @@ const NavBar = (props) => {
         alignLinks="right"
         brand={
           <Link to={"/"}>
-              <img src={logo} className="App-logo" alt="logo"/>
+            <img src={logo} className="App-logo" alt="logo" />
           </Link>
         }
-
         id="mobile-nav"
         className="custom-nav"
         centerLogo={false}
         fixed={true}
       >
+        {categories.map((category, index) => (
+          <NavLink
+            key={index}
+            to={`/categories/${category}`}
+            className="custom-nav-item"
+          >
+            {category}
+          </NavLink>
+        ))}
 
-
-      {categories.map((category, index) =>
-                    <NavLink key={index} to={`/categories/${category}`} className="custom-nav-item">
-                        {category}
-                    </NavLink>
-                )}
-
-        <NavItem to="#">Reglas</NavItem>
-
-
-
-        <NavItem className="custom-nav-item">
+        <NavLink to={`/cart`} className="custom-nav-item">
           {props.children}
-        </NavItem>
-
+        </NavLink>
       </Navbar>
     </>
   );

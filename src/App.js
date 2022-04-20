@@ -16,6 +16,7 @@ const App = () => {
   const messageItemDetail = "Item Detail Container";
   return (
     <BrowserRouter>
+    
       <CartProvider>
         <NavBar>
           <CartWidget/>

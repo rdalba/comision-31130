@@ -10,18 +10,14 @@ const Item = ({ product }) => {
         <Card
           className="card card-image img"
           closeIcon={<Icon>close</Icon>}
-          header={<CardTitle image={product.img} reveal waves="light" />}
+          header={<CardTitle image={product.pictureUrl} reveal waves="light" />}
           reveal={
             <>
-              <h3>Precio: {product.precio}</h3>
+              <h3>Precio: {product.price}</h3>
               <br></br>
               <br></br>
-              <p>{product.descripcion}</p>
-              <br></br>
-              <br></br>
-              <h4>{product.marca}</h4>
-              <br></br>
-              <p>{product.observacion}</p>
+              <p>{product.description}</p>
+           
 
               <div className="btnDetail">
                 <Link to={`/item/${product.id}`}> COMPRAR </Link>
@@ -30,7 +26,7 @@ const Item = ({ product }) => {
           }
           title={
             <>
-              <h2>{product.articuloTitulo}</h2>
+              <h2>{product.title}</h2>
             </>
             }
         ></Card>
