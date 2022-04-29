@@ -4,20 +4,19 @@ import ItemList from "../ItemList/ItemList";
 import { ProductService } from "../../service/ProductService/ProductService";
 import { useParams } from "react-router-dom";
 
-
+import {ProductsDao} from "../Firebase/Products";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
 
-  const { id: categoryDescription } = useParams(); // verificar el Id en productos
+  const { id: categoryIdDescription } = useParams(); // verificar el Id en productos
 
   useEffect(() => {
-    fetchData(categoryDescription);
-  }, [categoryDescription]);
+    fetchData(categoryIdDescription);
+  }, [categoryIdDescription]);
 
   const fetchData = async (categoryName) => {
-    let response = await ProductService().get();
-    if (categoryName !== undefined) response = response.filter((item) => categoryName === item.category.name);
+    let response = await ProductsDao().getProducts(categoryName);
     return setItems(response);
   };
 

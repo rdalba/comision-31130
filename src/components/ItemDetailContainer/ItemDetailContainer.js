@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { ProductService } from "../../service/ProductService/ProductService";
+//import { ProductService } from "../../service/ProductService/ProductService";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useParams } from "react-router-dom";
+
+import {ProductsDao} from "../Firebase/Products";
 
 const ItemDetailContainer = ({ message }) => {
   const [item, setItem] = useState({});
@@ -13,12 +15,9 @@ const ItemDetailContainer = ({ message }) => {
   }, []);
 
   const getItems = async (itemId) => {
-    const response = await ProductService().get();
-    setItem(getItem(response, itemId));
-  };
+    const response = await ProductsDao().getProductById(itemId);
+    setItem(response);
 
-  const getItem = (items, itemId) => {
-    return items.find((item) => item.id === Number(itemId));
   };
 
   return (

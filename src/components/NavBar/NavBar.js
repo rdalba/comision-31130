@@ -21,13 +21,13 @@ const NavBar = (props) => {
         centerLogo={false}
         fixed={true}
       >
-        {categories.map((category, index) => (
+        {categories.map((categoryId, index) => (
           <NavLink
             key={index}
-            to={`/categories/${category}`}
+            to={`/categories/${categoryId}`}
             className="custom-nav-item"
           >
-            {category}
+            {categoryId}
           </NavLink>
         ))}
 
