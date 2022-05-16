@@ -6,15 +6,17 @@ const CartWidget = () => {
   const { items, getItemsQty } = useContext(contexto);
   return (
     <>
-                {
-                (items.length === 0) ?
-                <> </> :
-                <Badge newIcon={<Icon medium>shopping_cart</Icon>} className="red" caption={"Items"}>
-                    {getItemsQty()}
-                </Badge>
-            }
-
-      
+      {items.length === 0 ? (
+        <> </>
+      ) : (
+        <Badge
+          newIcon={<Icon medium>shopping_cart</Icon>}
+          className="red"
+          caption={"Items"}
+        >
+          {getItemsQty()}
+        </Badge>
+      )}
     </>
   );
 };

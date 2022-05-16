@@ -1,6 +1,6 @@
 import { getFirestore, collection, getDocs, query, where, doc, getDoc } from "firebase/firestore"
 
-const ProductsDao = () => {
+const ProductsHockey = () => {
 
     const firestore = getFirestore();
     const dbarticulos = collection(firestore, "articulos")
@@ -30,4 +30,4 @@ const ProductsDao = () => {
 
 }
 
-export {ProductsDao}
+export {ProductsHockey}

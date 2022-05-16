@@ -3,20 +3,19 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { ProductService } from "../../service/ProductService/ProductService";
 import { useParams } from "react-router-dom";
-
-import {ProductsDao} from "../Firebase/Products";
+import { ProductsHockey } from "../Firebase/Products";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
 
-  const { id: categoryIdDescription } = useParams(); // verificar el Id en productos
+  const { id: categoryDescription } = useParams(); // verificar el Id en productos
 
   useEffect(() => {
-    fetchData(categoryIdDescription);
-  }, [categoryIdDescription]);
+    fetchData(categoryDescription);
+  }, [categoryDescription]);
 
   const fetchData = async (categoryName) => {
-    let response = await ProductsDao().getProducts(categoryName);
+    let response = await ProductsHockey().getProducts(categoryName);
     return setItems(response);
   };
 

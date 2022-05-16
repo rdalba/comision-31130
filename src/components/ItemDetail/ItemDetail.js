@@ -1,19 +1,19 @@
 import "./ItemDetail.css";
 import { Button, Card, CardTitle, Col, Icon, Row } from "react-materialize";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+//import { useContext } from "react";
 //import CartProvider from "../../context/CartContext";
 import { contexto } from "../../context/CartContext";
 
 const ItemDetail = ({ product }) => {
+
   const [finished, setFinished] = useState(false);
 
   const { addItem } = useContext(contexto);
 
   const onAdd = (cantidad) => {
-    console.log(`Esta comprando {cantidad} items`);
     addItem(product, cantidad);
     setFinished(true);
   };
@@ -44,6 +44,9 @@ const ItemDetail = ({ product }) => {
                 <br></br>
                 <br></br>
                 <p>{product.description}</p>
+                <br></br>
+                <br></br>
+                <p> Stock: {product.stock} </p>
               </Col>
 
               <Col l={3} m={3}>

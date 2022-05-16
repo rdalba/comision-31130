@@ -3,11 +3,11 @@ import './ItemCount.css'
 import {useState} from "react";
 
 const ItemCount = ({stock, initial, onAdd }) => {
-    const btnMessage = "Agregar Al Carrito"
+    const btnMessage = "Agregar al Carrito"
 
-    //const [disponible, setDisponible] = useState(stock);
-    const [disponible, setDisponible] = useState(parseInt(stock));
+    const [disponible, setDisponible] = useState(stock);
     const [cantidad, setCantidad] = useState(initial)
+
 
 
     const substractItem = () => {
@@ -27,7 +27,7 @@ const ItemCount = ({stock, initial, onAdd }) => {
             setDisponible(disponible - cantidad);
             onAdd(cantidad);
         } else {
-            alert('Cantidad Disponible superada')
+            alert('Cantidad disponible superada')
         }
     }
 

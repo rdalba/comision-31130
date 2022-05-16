@@ -38,6 +38,7 @@ const App = () => {
           path="/cart" 
           element={<Cart/>} />
         </Routes>
+        
       </CartProvider>
     </BrowserRouter>
   );

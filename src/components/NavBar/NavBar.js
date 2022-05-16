@@ -19,17 +19,13 @@ const NavBar = (props) => {
         id="mobile-nav"
         className="custom-nav"
         centerLogo={false}
-        fixed={true}
-      >
-        {categories.map((categoryId, index) => (
-          <NavLink
-            key={index}
-            to={`/categories/${categoryId}`}
-            className="custom-nav-item"
-          >
-            {categoryId}
+        fixed={true}>
+          
+        {categories.map((category, index) => 
+          <NavLink key={index} to={`/categories/${category}`} className="custom-nav-item">
+            {category}
           </NavLink>
-        ))}
+        )}
 
         <NavLink to={`/cart`} className="custom-nav-item">
           {props.children}
